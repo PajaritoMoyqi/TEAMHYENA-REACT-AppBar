@@ -3,10 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import EmailIcon from '@mui/icons-material/Email';
 import { Badge } from '@mui/material';
-
-const getRandomNum = (initialNum) => {
-  return Math.floor(Math.random()*(initialNum));
-}
+import { getRandomNum } from './methods'
 
 const AppEmailAndNotification = memo(() => {
 
