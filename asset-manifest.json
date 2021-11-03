@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TEAMHEYNA-REACT-AppBar/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/TEAMHEYNA-REACT-AppBar/static/js/main.cacc2e21.chunk.js",
+    "main.js.map": "/TEAMHEYNA-REACT-AppBar/static/js/main.cacc2e21.chunk.js.map",
+    "runtime-main.js": "/TEAMHEYNA-REACT-AppBar/static/js/runtime-main.2eefb76e.js",
+    "runtime-main.js.map": "/TEAMHEYNA-REACT-AppBar/static/js/runtime-main.2eefb76e.js.map",
+    "static/js/2.56bbb6e1.chunk.js": "/TEAMHEYNA-REACT-AppBar/static/js/2.56bbb6e1.chunk.js",
+    "static/js/2.56bbb6e1.chunk.js.map": "/TEAMHEYNA-REACT-AppBar/static/js/2.56bbb6e1.chunk.js.map",
+    "static/js/3.66812695.chunk.js": "/TEAMHEYNA-REACT-AppBar/static/js/3.66812695.chunk.js",
+    "static/js/3.66812695.chunk.js.map": "/TEAMHEYNA-REACT-AppBar/static/js/3.66812695.chunk.js.map",
+    "index.html": "/TEAMHEYNA-REACT-AppBar/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/TEAMHEYNA-REACT-AppBar/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.56bbb6e1.chunk.js.LICENSE.txt": "/TEAMHEYNA-REACT-AppBar/static/js/2.56bbb6e1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2eefb76e.js",
+    "static/js/2.56bbb6e1.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.cacc2e21.chunk.js"
+  ]
+}
