@@ -14,7 +14,7 @@
 **Modulization** 및 **memo & useCallback** 구현
 <br>
 
-21-11-03 : **** (14:30-)
+21-11-03 : **** (14:30-16:30, 17:00-)
 <br>
-**Menu** 구현 및 **Quotes API** 추가
+**Menu** 및 **Left Drawer** 구현, **Quotes API** 추가, github page **배포**
 <br>

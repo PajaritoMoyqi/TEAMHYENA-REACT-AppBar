@@ -1,8 +1,9 @@
-import ButtonAppBar from './AppBar';;
+import MyAppBar from './AppBar';
+
 
 const App = () => {
   return (
-    <ButtonAppBar />
+    <MyAppBar />
   );
 }
 
