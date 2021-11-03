@@ -1,5 +1,5 @@
 {
-  "homepage": "https://PajaritoMoyqi.github.io/TEAMHEYNA-REACT-AppBar",
+  "homepage": "https://PajaritoMoyqi.github.io/TEAMHYENA-REACT-AppBar",
   "name": "teamhyena-react-appbar",
   "version": "0.1.0",
   "private": true,
@@ -42,6 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "type": "module"
+  }
 }
