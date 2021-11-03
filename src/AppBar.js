@@ -3,9 +3,10 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 
-import AppEmailAndNotification from './AppEmailAndNotification';
+import AppEmail from './AppEmail';
 import AppAccounts from './AppAccounts';
 import AppTitle from './AppTitle';
+import AppNotification from './AppNotification';
 
 const ButtonAppBar = () => {
 
@@ -14,7 +15,8 @@ const ButtonAppBar = () => {
       <AppBar position="static">
         <Toolbar>
           <AppTitle />
-          <AppEmailAndNotification />
+          <AppEmail />
+          <AppNotification />
           <AppAccounts />
         </Toolbar>
       </AppBar>
