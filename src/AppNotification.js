@@ -3,11 +3,19 @@ import React, { memo, useCallback, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Badge, Menu, MenuItem } from '@mui/material';
-import { getRandomNum, getArr1toNum } from './methods'
-
+import { getRandomNum } from './methods'
 
 const notificationNum = getRandomNum(10);
-const menuNotArr = getArr1toNum(notificationNum);
+let menuNotArr = [];
+
+fetch(`https://api.quotable.io/quotes?limit=${notificationNum}&maxLength=40&page=1`)
+  .then((response) => response.json())
+  .then((data) => {
+    data.results.forEach(quoteObj => {
+      console.log(quoteObj)
+      menuNotArr = [...menuNotArr, {"author": `${quoteObj.author}`, "content": `${quoteObj.content}`}];
+    })
+  });
 
 const AppNotification = memo(() => {
 
@@ -54,7 +62,13 @@ const AppNotification = memo(() => {
         onClose={handleClose}
       >
         {
-          menuNotArr.map((item, idx) => <MenuItem key={idx} onClick={handleClose}></MenuItem>)
+          menuNotArr.map((item, idx) => {
+            return <MenuItem key={idx} onClick={handleClose}>
+              {item.content}
+              <br />
+              - {item.author}
+            </MenuItem>
+          })
         }
       </Menu>
     </>

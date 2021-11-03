@@ -2,11 +2,20 @@ import React, { memo, useCallback, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
 import { Badge, Menu, MenuItem } from '@mui/material';
-import { getRandomNum, getArr1toNum } from './methods'
+import { getRandomNum } from './methods'
 
 
-const emailNum = getRandomNum(30);
-const menuEmailArr = getArr1toNum(emailNum);
+const emailNum = getRandomNum(10);
+let menuEmailArr = [];
+
+fetch(`https://api.quotable.io/quotes?limit=${emailNum}&maxLength=40&page=1`)
+  .then((response) => response.json())
+  .then((data) => {
+    data.results.forEach(quoteObj => {
+      console.log(quoteObj)
+      menuEmailArr = [...menuEmailArr, {"author": `${quoteObj.author}`, "content": `${quoteObj.content}`}];
+    })
+  });
 
 const AppEmail = memo(() => {
 
@@ -54,7 +63,13 @@ const AppEmail = memo(() => {
         onClose={handleClose}
       >
         {
-          menuEmailArr.map((item, idx) => <MenuItem key={idx} onClick={handleClose}>{item}</MenuItem>)
+          menuEmailArr.map((item, idx) => {
+            return <MenuItem key={idx} onClick={handleClose}>
+              {item.content}
+              <br />
+              - {item.author}
+            </MenuItem>
+          })
         }
       </Menu>
     </>
