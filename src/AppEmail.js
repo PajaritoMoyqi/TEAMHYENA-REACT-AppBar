@@ -8,14 +8,17 @@ import { getRandomNum } from './methods'
 const emailNum = getRandomNum(10);
 let menuEmailArr = [];
 
-fetch(`https://api.quotable.io/quotes?limit=${emailNum}&maxLength=40&page=1`)
-  .then((response) => response.json())
-  .then((data) => {
-    data.results.forEach(quoteObj => {
-      console.log(quoteObj)
-      menuEmailArr = [...menuEmailArr, {"author": `${quoteObj.author}`, "content": `${quoteObj.content}`}];
-    })
-  });
+if(emailNum!==0){
+  fetch(`https://api.quotable.io/quotes?limit=${emailNum}&maxLength=40&page=1`)
+    .then((response) => response.json())
+    .then((data) => {
+      data.results.forEach(quoteObj => {
+        console.log(quoteObj)
+        menuEmailArr = [...menuEmailArr, {"author": `${quoteObj.author}`, "content": `${quoteObj.content}`}];
+      })
+    });
+}
+
 
 const AppEmail = memo(() => {
 
@@ -47,31 +50,35 @@ const AppEmail = memo(() => {
           <EmailIcon />
         </Badge>
       </IconButton>
-      <Menu
-        id="email-appbar"
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
-        }}
-        keepMounted
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        {
-          menuEmailArr.map((item, idx) => {
-            return <MenuItem key={idx} onClick={handleClose}>
-              {item.content}
-              <br />
-              - {item.author}
-            </MenuItem>
-          })
-        }
-      </Menu>
+      {
+        emailNum!==0 &&
+          <Menu
+          id="email-appbar"
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          {
+            menuEmailArr.map((item, idx) => {
+              return <MenuItem key={idx} onClick={handleClose}>
+                {item.content}
+                <br />
+                - {item.author}
+              </MenuItem>
+            })
+          }
+        </Menu>
+      }
+
     </>
   )
 });
