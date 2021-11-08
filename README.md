@@ -14,7 +14,9 @@
 **Modulization** 및 **memo & useCallback** 구현
 <br>
 
-21-11-03 : **** (14:30-16:30, 17:00-)
+21-11-03 : **2시간 30분** (14:30-16:30, 17:00-17:30)
 <br>
 **Menu** 및 **Left Drawer** 구현, **Quotes API** 추가, github page **배포**
 <br>
+
+총 소요 시간 : 4시간
