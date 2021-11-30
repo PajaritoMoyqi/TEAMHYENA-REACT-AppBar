@@ -1,4 +1,4 @@
-import MyAppBar from './AppBar';
+import MyAppBar from './MyAppBar';
 
 
 const App = () => {
